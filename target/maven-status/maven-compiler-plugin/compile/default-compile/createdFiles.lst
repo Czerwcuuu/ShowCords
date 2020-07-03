@@ -1,2 +1,4 @@
-showcords\showcords\ShowCords.class
 showcords\showcords\Tasks\ShowCordsTask.class
+showcords\showcords\ShowCords.class
+showcords\showcords\Events\ShowCordsEvent.class
+showcords\showcords\Events\ShowCordsEvent$1.class
