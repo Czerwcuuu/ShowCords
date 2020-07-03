@@ -10,7 +10,7 @@ public final class ShowCords extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        getServer().getPluginManager().registerEvents(new ShowCordsEvent(),this);
+        getServer().getPluginManager().registerEvents(new ShowCordsEvent(this),this);
     }
 
     @Override

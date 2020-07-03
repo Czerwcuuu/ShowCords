@@ -8,9 +8,13 @@ import org.bukkit.plugin.Plugin;
 
 public class ShowCordsEvent implements Listener {
 
+    public static Plugin plugin;
+    public ShowCordsEvent(Plugin plugin){
+        this.plugin = plugin;
+    }
     @EventHandler
     public void WhenPlayerMoves(PlayerMoveEvent e){
-        Bukkit.getServer().getScheduler().runTaskTimer((Plugin) this, new Runnable() {
+        Bukkit.getServer().getScheduler().runTaskTimer(plugin, new Runnable() {
             @Override
             public void run() {
                 Bukkit.broadcastMessage("Cordinates: x:"+e.getPlayer().getLocation().getX()+" z:"+e.getPlayer().getLocation().getZ());
