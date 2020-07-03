@@ -1,0 +1,6 @@
+name: ShowCords
+version: ${project.version}
+main: showcords.showcords.ShowCords
+api-version: 1.13
+authors: [Stylowy]
+description: Showing Cords of Definied player every x Time
