@@ -5,13 +5,16 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.Plugin;
+import showcords.showcords.ShowCords;
 
 public class ShowCordsEvent implements Listener {
 
-    public static Plugin plugin;
-    public ShowCordsEvent(Plugin plugin){
+    static ShowCords plugin;
+
+    public ShowCordsEvent(ShowCords plugin){
         this.plugin = plugin;
     }
+
     @EventHandler
     public void WhenPlayerMoves(PlayerMoveEvent e){
         Bukkit.getServer().getScheduler().runTaskTimer(plugin, new Runnable() {
@@ -19,7 +22,7 @@ public class ShowCordsEvent implements Listener {
             public void run() {
                 Bukkit.broadcastMessage("Cordinates: x:"+e.getPlayer().getLocation().getX()+" z:"+e.getPlayer().getLocation().getZ());
             }
-        },0L,100L);
+        },1000,20L);
 
     }
 
