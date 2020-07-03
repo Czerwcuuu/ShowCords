@@ -1,5 +1,5 @@
 name: ShowCords
-version: 1.1.3-SNAPSHOT
+version: 1.1.6-SNAPSHOT
 main: showcords.showcords.ShowCords
 api-version: 1.13
 authors: [Stylowy]
